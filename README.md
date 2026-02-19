@@ -67,7 +67,8 @@ It's highly recommended to reboot the PC after the installation is complete
 
 # Troubleshooting
 
-Q: My background didn't apply, what would I do?
+Q: My background didn't apply, what should I do?
+
 A: Press SUPER + Q and paste:
 ```bash
 pkill swww; swww-daemon & swww img ~/Pictures/yourwallpapername.extension
