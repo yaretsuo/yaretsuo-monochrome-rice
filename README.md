@@ -6,7 +6,7 @@ A minimalist pure black and white rice
 
 # Getting started
 
-This rice implies black and white Hyprland theme for Arch Linux. Before installing, you need to make sure that several packages are preinstalled on your Arch Linux (including drivers on GPU)
+This rice implies black and white Hyprland theme for Arch Linux. Before installing, you need to make sure that several packages are preinstalled on your machine (including drivers on GPU)
 
 ```bash
 sudo pacman -S base linux linux-firmware grub efibootmgr base-devel vim bash-completion networkmanager git alacritty
@@ -54,6 +54,11 @@ There are 5 workspaces in the left module, the clock is in the middle and the tr
 
 You can put any background into the ~/Pictures directory, but if you want to use the default [background](https://www.freepik.com/free-photo/black-white-dramatic-landscapes-with-forest_33417175.htm#fromView=search&page=1&position=9&uuid=5ed8f481-106c-40e1-a494-a12a3cd5e907&query=black+and+white+aesthetic+hills), go ahead
 
+# SDDM login theme
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f2d04d10-91e6-4582-9d6b-d5979101a185" />
+
+
 # Installation
 
 ```bash
@@ -65,7 +70,7 @@ chmod +x install.sh
 
 It's highly recommended to reboot the PC after the installation is complete
 
-Launch the nwg-look app and set the Orchis-dark in Widgets section and Papirus-Dark in Icons theme
+Launch the nwg-look app and choose the Orchis-dark in Widgets section and Papirus-Dark in Icons
 
 # Troubleshooting
 
