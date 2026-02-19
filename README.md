@@ -73,7 +73,7 @@ It's highly recommended to reboot the PC after the installation is complete
 
 Launch the nwg-look app and choose the Orchis-dark in Widgets section and Papirus-Dark in Icons
 
-# Troubleshooting with the background
+# Troubleshooting background issues
 
 Q: My background didn't apply, what should I do?
 
@@ -83,7 +83,7 @@ pkill swww; swww-daemon & swww img ~/Pictures/yourwallpapername.extension
 ```
 Reboot a computer
 
-# Troubleshooting with the resolution
+# Troubleshooting resolution issues
 
 Q: How to set my resolution and refresh rate?
 
