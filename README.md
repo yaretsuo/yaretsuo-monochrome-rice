@@ -59,6 +59,11 @@ You can put any background into the ~/Pictures directory, but if you want to use
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f2d04d10-91e6-4582-9d6b-d5979101a185" />
 
+# Firefox theme
+
+<img width="1885" height="75" alt="image" src="https://github.com/user-attachments/assets/379e8922-8c25-433f-a0ed-463f11c6f79e" />
+
+Beautiful animated [theme](https://addons.mozilla.org/en-US/firefox/addon/nicothin-space/) for firefox
 
 # Installation
 
