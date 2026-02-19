@@ -9,8 +9,9 @@ A minimalist pure black and white rice
 This rice implies black and white Hyprland theme for Arch Linux. Before installing, you need to make sure that several packages are preinstalled on your machine (including drivers on GPU)
 
 ```bash
-sudo pacman -S base linux linux-firmware grub efibootmgr base-devel vim bash-completion networkmanager git alacritty
+pacman -Q base linux linux-firmware grub efibootmgr base-devel vim bash-completion networkmanager git alacritty
 ```
+If something was not found, install it
 
 Required dependencies
 
