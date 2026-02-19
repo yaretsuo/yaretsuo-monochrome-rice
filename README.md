@@ -65,6 +65,8 @@ chmod +x install.sh
 
 It's highly recommended to reboot the PC after the installation is complete
 
+Launch the nwg-look app and set the Orchis-dark in Widgets section and Papirus-Dark in Icons theme
+
 # Troubleshooting
 
 Q: My background didn't apply, what should I do?
@@ -72,4 +74,22 @@ Q: My background didn't apply, what should I do?
 A: Press SUPER + Q and paste:
 ```bash
 pkill swww; swww-daemon & swww img ~/Pictures/yourwallpapername.extension
+```
+
+# Troubleshooting
+
+Q: How to set my resolution and refresh rate?
+
+A: Press SUPER + Q and write:
+```bash
+hyprctl monitors
+```
+There might be DP-1, HDMI-1 etc.
+
+```bash
+vim .config/hypr/hyprland.conf
+```
+You need to modify the first line of this file. If you have 1920x1080 monitor with 144 refresh rate connected via DisplayPort, paste this:
+```bash
+monitor=DP-1,1920x1080@180,0x0,1
 ```
