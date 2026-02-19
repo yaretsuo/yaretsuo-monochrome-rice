@@ -72,7 +72,7 @@ It's highly recommended to reboot the PC after the installation is complete
 
 Launch the nwg-look app and choose the Orchis-dark in Widgets section and Papirus-Dark in Icons
 
-# Troubleshooting
+# Troubleshooting with the background
 
 Q: My background didn't apply, what should I do?
 
@@ -81,7 +81,7 @@ A: Press SUPER + Q and paste:
 pkill swww; swww-daemon & swww img ~/Pictures/yourwallpapername.extension
 ```
 
-# Troubleshooting
+# Troubleshooting with the resolution
 
 Q: How to set my resolution and refresh rate?
 
@@ -94,7 +94,7 @@ There might be DP-1, HDMI-1 etc.
 ```bash
 vim .config/hypr/hyprland.conf
 ```
-You need to modify the first line of this file. If you have 1920x1080 monitor with 144 refresh rate connected via DisplayPort, paste this:
+You need to modify the first line of this file. If you got 1920x1080 resolution with 144 refresh rate connected via DisplayPort, paste this:
 ```bash
 monitor=DP-1,1920x1080@180,0x0,1
 ```
