@@ -80,6 +80,7 @@ A: Press SUPER + Q and paste:
 ```bash
 pkill swww; swww-daemon & swww img ~/Pictures/yourwallpapername.extension
 ```
+Reboot a computer
 
 # Troubleshooting with the resolution
 
