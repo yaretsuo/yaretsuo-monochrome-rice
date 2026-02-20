@@ -96,12 +96,12 @@ A: Press SUPER + Q and write:
 ```bash
 hyprctl monitors
 ```
-There might be DP-1, HDMI-1 etc.
+The terminal will print DP-1, HDMI-1 etc.
 
 ```bash
 vim .config/hypr/hyprland.conf
 ```
 You need to modify the first line of this file. If you got 1920x1080 resolution with 144 refresh rate connected via DisplayPort, paste this:
 ```bash
-monitor=DP-1,1920x1080@180,0x0,1
+monitor=DP-1,1920x1080@144,0x0,1
 ```
