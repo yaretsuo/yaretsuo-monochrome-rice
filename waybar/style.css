@@ -1,0 +1,66 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "CaskaydiaCove Nerd Font Mono";
+    font-size: 15px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#workspaces button {
+    font-size: 25px;
+    padding: 0 5px;
+    color: #888888; 
+}
+
+#workspaces button:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    background: transparent;
+}
+
+#tray {
+    font-size: 25px;
+    padding: 0 5px;
+    color: #ffffff;
+}
+
+#pulseaudio {
+    font-size: 25px;
+    padding: 0 5px;
+    color: #ffffff;
+}
+
+#network {
+    font-size: 25px;
+    padding: 0 5px;
+    color: #ffffff;
+}
+
+#battery {
+    font-size: 25px;
+    padding: 0 5px;
+    color: #ffffff;
+}
+
+#clock {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 15px;
+}
+
+#battery.warning {
+    color: #ebdbb2;
+}
+
+#battery.critical {
+    color: #cc241d;
+}
