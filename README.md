@@ -16,7 +16,7 @@ If something is missing, then install it
 Required dependencies
 
 ```bash
-sudo pacman -S qt5ct qt6ct xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprland ttf-jetbrains-mono-nerd ttf-cascadia-code-nerd mpv woff2-font-awesome orchis-theme gnome-themes-extra waybar rofi hyprcursor dunst qt5-declarative qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects noto-fonts noto-fonts-cjk noto-fonts-emoji sddm fastfetch pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber grim slurp wl-clipboard awww imagemagick pulsemixer swayimg 7zip yazi
+sudo pacman -S qt5ct qt6ct xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprland ttf-jetbrains-mono-nerd ttf-cascadia-code-nerd mpv woff2-font-awesome orchis-theme gnome-themes-extra waybar rofi hyprcursor dunst qt5-declarative qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects papirus-icon-theme noto-fonts noto-fonts-cjk noto-fonts-emoji sddm fastfetch pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber grim slurp wl-clipboard awww imagemagick pulsemixer swayimg 7zip yazi
 ```
 
 # Hyprland
