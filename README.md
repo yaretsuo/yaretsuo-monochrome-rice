@@ -11,7 +11,6 @@ This rice implies black and white Hyprland theme for Arch Linux. Before installi
 ```bash
 pacstrap /mnt base linux linux-firmware grub efibootmgr base-devel vim bash-completion networkmanager git kitty
 ```
-If something is missing, then install it
 
 Required dependencies:
 
