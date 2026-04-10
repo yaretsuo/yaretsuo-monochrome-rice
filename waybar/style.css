@@ -19,7 +19,8 @@ window#waybar {
 
 #workspaces button:hover {
     color: #ffffff;
-    background: rgba(255, 255, 255, 0.1);
+    background: transparent;
+    box-shadow: none;
 }
 
 #workspaces button.active {
