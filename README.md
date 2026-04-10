@@ -13,7 +13,7 @@ pacstrap /mnt base linux linux-firmware grub efibootmgr base-devel vim bash-comp
 ```
 If something is missing, then install it
 
-Required dependencies
+Required dependencies:
 
 ```bash
 sudo pacman -S qt5ct qt6ct xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprland ttf-jetbrains-mono-nerd ttf-cascadia-code-nerd mpv woff2-font-awesome orchis-theme gnome-themes-extra waybar rofi hyprcursor dunst qt5-declarative qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects papirus-icon-theme noto-fonts noto-fonts-cjk noto-fonts-emoji sddm fastfetch pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber grim slurp wl-clipboard awww imagemagick pulsemixer swayimg 7zip yazi
@@ -31,11 +31,13 @@ sudo pacman -S qt5ct qt6ct xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hy
 
 Cursor: [Bibata-Modern-Ice](https://github.com/ful1e5/Bibata_Cursor)
 
-Folder icons: [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
+GTK theme: [Orchis](https://github.com/vinceliuice/Orchis-theme)
+
+Icon theme: [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
 
 # Waybar
 
-There are 5 workspaces in the left module, the clock is in the middle and the tray is in the right
+There are 5 workspaces in the left module, the clock is in the middle and the tray is in the right:
 
 <img width="1914" height="26" alt="image" src="https://github.com/user-attachments/assets/3504d0ac-e6db-4021-9a55-fc527c02abde" />
 
@@ -58,7 +60,6 @@ There are 5 workspaces in the left module, the clock is in the middle and the tr
 # MPV
 
 <img width="1253" height="744" alt="image" src="https://github.com/user-attachments/assets/bb1b4fce-ee60-4ae3-80aa-22ab06701026" />
-
 
 # Dunst
 
