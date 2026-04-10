@@ -55,6 +55,11 @@ There are 5 workspaces in the left module, the clock is in the middle and the tr
 | Delete file permanently | SHIFT + D |
 | Select multiple files | V |
 
+# MPV
+
+<img width="1253" height="744" alt="image" src="https://github.com/user-attachments/assets/bb1b4fce-ee60-4ae3-80aa-22ab06701026" />
+
+
 # Dunst
 
 <img width="334" height="90" alt="image" src="https://github.com/user-attachments/assets/fe48ec81-d4ff-45d2-a7ca-25a5816c427c" />
