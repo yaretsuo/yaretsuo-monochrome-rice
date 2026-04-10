@@ -94,7 +94,7 @@ Q: My background didn't apply, what should I do?
 
 A: Press SUPER + Q and paste:
 ```bash
-pkill awww; awww-daemon & awww img ~/Pictures/yourwallpapername.extension
+pkill awww; awww-daemon & sleep 1 && awww img ~/Pictures/wallpaper.extension
 ```
 Reboot a computer
 
