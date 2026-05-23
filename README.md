@@ -1,6 +1,6 @@
 # yaretsuo-monochrome-rice
 
-Pure minimalist black and white Hyprland rice that uses only cli versions of the apps
+Pure minimalist black and white Hyprland rice that uses only cli versions of the apps. As of May 23, 2026 this project is still under development, so bugs are inevitable
 
 <img width="1914" height="1074" alt="image" src="https://github.com/user-attachments/assets/401cd141-f140-4f31-805f-6e192b2db005" />
 
