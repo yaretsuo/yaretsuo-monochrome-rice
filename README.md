@@ -48,13 +48,14 @@ There are 5 workspaces in the left module, the clock is in the middle and the tr
 
 <img width="1914" height="1037" alt="image" src="https://github.com/user-attachments/assets/6f86316f-fe98-4e7b-86a9-23bed18483ec" />
 
-| App | Bind |
+| Action | Bind |
 |----------|----------|
 | Moving between folders | ← → |
 | Unzip an archive | Enter |
 | Trash file | D |
 | Delete file permanently | SHIFT + D |
 | Select multiple files | V |
+| Global search | S |
 
 # MPV
 
