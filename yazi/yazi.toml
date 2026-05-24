@@ -19,7 +19,11 @@ display = [
 ]
 
 video = [
-    { run = 'mpv "$@"', block = false, desc = "Play with mpv"}
+    { run = 'mpv --force-window "$@"', block = false, desc = "Play with mpv"}
+]
+
+audio = [
+    { run = 'mpv --force-window "$@"', block = false, desc = "Play Audio with mpv" }
 ]
 
 browser = [
@@ -32,15 +36,20 @@ rules = [
     { mime = "image/webp", use = ["display"] },
     { mime = "video/*", use = ["video"] },
     { mime = "audio/*", use = ["video"] },
-    { mime = "text/*",  use = ["edit"] },
-    { mime = "application/pdf", use = ["browser", "reveal"] },   
+    { mime = "text/*", use = ["edit"] },
     { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", use = ["extract"] },
+    { mime = "audio/*", use = ["audio"] },
 
-    { name = "*.pdf", use = ["browser", "reveal"] }, 
-    { name = "*.mkv",  use = "video" },
-    { name = "*.mp4",  use = "video" },
-    { name = "*.avi",  use = "video" },
-    { name = "*.mov",  use = "video" },
-    { name = "*.webm", use = "video" },
-    { name = "*",      use = "edit" }
+    { name = "*.pdf",  mime = "*", use = ["browser", "reveal"] },
+    { name = "*.mkv",  mime = "*", use = "video" },
+    { name = "*.mp4",  mime = "*", use = "video" },
+    { name = "*.avi",  mime = "*", use = "video" },
+    { name = "*.mov",  mime = "*", use = "video" },
+    { name = "*.webm", mime = "*", use = "video" },
+    { name = "*",      mime = "*", use = "edit" },
+
+    { name = "*.conf", mime = "*", use = ["edit"] },
+    { name = "*.yaml", mime = "*", use = ["edit"] },
+    { name = "*.json", mime = "*", use = ["edit"] },
+    { name = "*.yml",  mime = "*", use = ["edit"] }
 ]
