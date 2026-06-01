@@ -26,7 +26,7 @@ sudo pacman -S qt5ct qt6ct xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hy
 | File Manager | SUPER + E |
 | Close app | SUPER + C |
 | Screenshot | SUPER + S |
-| CLipboard history | SUPER + V |
+| Clipboard history | SUPER + V |
 | App launcher | SUPER |
 
 Cursor: [Bibata-Modern-Ice](https://github.com/ful1e5/Bibata_Cursor)
