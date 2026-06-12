@@ -7,8 +7,7 @@ cp -rf dunst/ hypr/ kitty/ mpv/ qt5ct/ qt6ct/ rofi/ waybar/ yazi/ ~/.config/
 mkdir -p ~/Pictures/
 cp -rf tux.png ~/Pictures/
 
-awww-daemon & 
-sleep 0.5 && awww img ~/Pictures/tux.png
+awww-daemon & sleep 0.5 && awww img ~/Pictures/tux.png
 
 sudo mkdir -p /usr/share/sddm/themes/
 sudo cp -rf yaretsuo-monochrome-theme/ /usr/share/sddm/themes/
