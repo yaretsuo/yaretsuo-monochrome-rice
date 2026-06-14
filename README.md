@@ -1,6 +1,6 @@
 # yaretsuo-monochrome-rice
 
-Pure minimalist black and white Hyprland rice that uses only cli versions of the apps. As of May 23, 2026 this project is still under development, so bugs are inevitable
+Pure minimalist black and white Hyprland rice that uses only cli versions of the apps.
 
 <img width="1914" height="1074" alt="image" src="https://github.com/user-attachments/assets/401cd141-f140-4f31-805f-6e192b2db005" />
 
@@ -15,7 +15,7 @@ pacstrap /mnt base linux linux-firmware grub efibootmgr base-devel vim bash-comp
 Required dependencies:
 
 ```bash
-sudo pacman -S qt5ct qt6ct xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprland ttf-jetbrains-mono-nerd ttf-cascadia-code-nerd mpv woff2-font-awesome orchis-theme gnome-themes-extra waybar rofi hyprcursor dunst qt5-declarative qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects papirus-icon-theme noto-fonts noto-fonts-cjk noto-fonts-emoji sddm fastfetch pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber grim slurp wl-clipboard cliphist awww imagemagick pulsemixer swayimg unzip 7zip yazi zoxide ripgrep fd fzf libnotify
+sudo pacman -S --needed qt5ct qt6ct xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprland ttf-jetbrains-mono-nerd ttf-cascadia-code-nerd mpv woff2-font-awesome orchis-theme gnome-themes-extra waybar rofi hyprcursor dunst qt5-declarative qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects papirus-icon-theme noto-fonts noto-fonts-cjk noto-fonts-emoji sddm fastfetch pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber grim slurp wl-clipboard cliphist awww imagemagick pulsemixer swayimg unzip 7zip yazi zoxide ripgrep fd fzf libnotify
 ```
 
 # Hyprland
