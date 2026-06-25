@@ -2,7 +2,7 @@ sudo mkdir -p /usr/share/icons/
 sudo cp -rf Bibata-Modern-Ice/ /usr/share/icons/
 
 mkdir -p ~/.config/
-cp -rf dunst/ hypr/ kitty/ mpv/ qt5ct/ qt6ct/ rofi/ waybar/ yazi/ ~/.config/
+cp -rf mako/ hypr/ kitty/ mpv/ qt5ct/ qt6ct/ rofi/ waybar/ yazi/ ~/.config/
 
 mkdir -p ~/Pictures/
 cp -rf tux.png ~/Pictures/
