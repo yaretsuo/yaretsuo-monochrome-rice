@@ -24,10 +24,10 @@ sudo pacman -S --needed qt5ct qt6ct xdg-desktop-portal-hyprland xdg-desktop-port
 |----------|----------|
 | Terminal | SUPER + Q |
 | File Manager | SUPER + E |
+| Process viewer | SUPER + Z |
 | Close app | SUPER + C |
 | Screenshot | SUPER + S |
 | Clipboard history | SUPER + V |
-| Process viewer | SUPER + Z |
 | App launcher | SUPER |
 
 Cursor: [Bibata-Modern-Ice](https://github.com/ful1e5/Bibata_Cursor)
