@@ -5,7 +5,7 @@ hl.monitor({ output = "your-monitor", mode = "preferred", position = "auto", sca
 local terminal = "kitty"
 local fileManager = "kitty -e yazi"
 local menu = "rofi -show drun -theme ~/.config/rofi/config.rasi"
-local screenshot = [[grim -g "$(slurp)" - | magick - -shave 3x3 - | wl-copy]]
+local screenshot = [[sh -c 'grim -g "$(slurp -b 00000000 -s 00000011 -c 00000000 -w 0)" - | wl-copy']]
 
 hl.env("GDK_BACKEND", "wayland,x11,*")
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
