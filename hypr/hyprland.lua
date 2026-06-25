@@ -88,6 +88,7 @@ hl.bind("SUPER + C", hl.dsp.window.close())
 hl.bind("SUPER + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + S", hl.dsp.exec_cmd(screenshot))
 hl.bind("SUPER + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
+hl.bind("SUPER + Z", hl.dsp.exec_cmd("kitty -e btop"))
 
 hl.bind("SUPER + SUPER_L", hl.dsp.exec_cmd("pkill rofi || " .. menu), { release = true })
 
