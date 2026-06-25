@@ -63,9 +63,10 @@ There are 5 workspaces in the left module, the clock is in the middle and the tr
 
 <img width="1253" height="744" alt="image" src="https://github.com/user-attachments/assets/bb1b4fce-ee60-4ae3-80aa-22ab06701026" />
 
-# Dunst
+# Mako
 
-<img width="334" height="90" alt="image" src="https://github.com/user-attachments/assets/fe48ec81-d4ff-45d2-a7ca-25a5816c427c" />
+<img width="320" height="98" alt="image_2026-06-25_18-30-33" src="https://github.com/user-attachments/assets/885b1e73-e144-440b-b53f-d9a66b0088f2" />
+
 
 # AWWW
 
