@@ -67,7 +67,6 @@ There are 5 workspaces in the left module, the clock is in the middle and the tr
 
 <img width="320" height="98" alt="image_2026-06-25_18-30-33" src="https://github.com/user-attachments/assets/885b1e73-e144-440b-b53f-d9a66b0088f2" />
 
-
 # AWWW
 
 You can put any background into the ~/Pictures directory
