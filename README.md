@@ -48,7 +48,8 @@ There are 5 workspaces in the left module, the clock is in the middle and the tr
 
 # Yazi
 
-<img width="1914" height="1037" alt="image" src="https://github.com/user-attachments/assets/6f86316f-fe98-4e7b-86a9-23bed18483ec" />
+<img width="1920" height="1044" alt="image" src="https://github.com/user-attachments/assets/6b247af8-0403-45e7-9fcb-dd6008045441" />
+
 
 | Action | Bind |
 |----------|----------|
