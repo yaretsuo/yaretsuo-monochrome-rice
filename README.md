@@ -113,7 +113,7 @@ hyprctl monitors
 The terminal will print DP-1, HDMI-1 etc.
 
 ```bash
-vim .config/hypr/hyprland.conf
+vim .config/hypr/hyprland.lua
 ```
 You need to modify the first line of this file. If you got 1920x1080 resolution with 144 refresh rate connected via DisplayPort, paste this:
 ```bash
