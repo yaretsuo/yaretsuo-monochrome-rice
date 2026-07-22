@@ -22,7 +22,7 @@
         "on-click": "hyprctl dispatch workspace {name}",
         "all-outputs": true,
         "persistent-workspaces": {
-            "*": 5
+            "*": [1, 2, 3, 4, 5]
         }
     },
 
