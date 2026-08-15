@@ -1,1 +1,1 @@
-swayimg.text.hide()
+swayimg.text.visible = false
