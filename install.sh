@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
 sudo mkdir -p /usr/share/icons/
 sudo cp -rf Bibata-Modern-Ice/ /usr/share/icons/
 
