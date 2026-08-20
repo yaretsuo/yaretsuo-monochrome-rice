@@ -1,23 +1,81 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-sudo mkdir -p /usr/share/icons/
-sudo cp -rf Bibata-Modern-Ice/ /usr/share/icons/
+BOLD="\033[1m"
+GREEN="\033[0;32m"
+BLUE="\033[0;34m"
+YELLOW="\033[0;33m"
+RED="\033[0;31m"
+RESET="\033[0m"
 
-mkdir -p ~/.config/
-cp -rf mako/ hypr/ kitty/ mpv/ swayimg/ qt5ct/ qt6ct/ rofi/ waybar/ yazi/ ~/.config/
+log_info()    { echo -e "${BLUE}${BOLD}[INFO]${RESET} $1"; }
+log_success() { echo -e "${GREEN}${BOLD}[OK]${RESET} $1"; }
+log_warn()    { echo -e "${YELLOW}${BOLD}[WARN]${RESET} $1"; }
+log_error()   { echo -e "${RED}${BOLD}[ERROR]${RESET} $1"; }
 
-mkdir -p ~/Pictures/
-cp -rf tux.png ~/Pictures/
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
+BACKUP_DIR="$HOME/.config-backup/backup_$(date +%Y%m%d_%H%M%S)"
 
-awww-daemon & sleep 0.5 && awww img ~/Pictures/tux.png
+echo -e "${BOLD}=== Yaretsuo Monochrome Rice Installer ===${RESET}\n"
 
-sudo mkdir -p /usr/share/sddm/themes/
-sudo cp -rf yaretsuo-monochrome-theme/ /usr/share/sddm/themes/
-sudo cp -rf sddm.conf /etc/sddm.conf
+command -v sudo >/dev/null 2>&1 || { log_error "sudo is required but not installed. Aborting."; exit 1; }
 
-mkdir -p ~/.icons/
-cp -rf default/ ~/.icons/
+log_info "Checking for existing user configurations..."
+CONFIGS=("mako" "hypr" "kitty" "mpv" "swayimg" "qt5ct" "qt6ct" "rofi" "waybar" "yazi")
+BACKUP_CREATED=false
 
-clear
-echo "It's highly recommended to reboot the PC"
+for cfg in "${CONFIGS[@]}"; do
+    if [ -d "$CONFIG_DIR/$cfg" ]; then
+        if [ "$BACKUP_CREATED" = false ]; then
+            mkdir -p "$BACKUP_DIR"
+            BACKUP_CREATED=true
+        fi
+        log_warn "Backing up existing $CONFIG_DIR/$cfg -> $BACKUP_DIR/"
+        mv "$CONFIG_DIR/$cfg" "$BACKUP_DIR/"
+    fi
+done
+
+if [ "$BACKUP_CREATED" = true ]; then
+    log_success "Existing configurations were backed up to: $BACKUP_DIR"
+fi
+
+log_info "Deploying configuration files to $CONFIG_DIR..."
+mkdir -p "$CONFIG_DIR"
+for cfg in "${CONFIGS[@]}"; do
+    if [ -d "$REPO_ROOT/$cfg" ]; then
+        cp -rf "$REPO_ROOT/$cfg" "$CONFIG_DIR/"
+    fi
+done
+
+log_info "Deploying wallpapers and icons..."
+mkdir -p "$HOME/Pictures"
+if [ -f "$REPO_ROOT/tux.png" ]; then
+    cp -f "$REPO_ROOT/tux.png" "$HOME/Pictures/"
+fi
+
+if [ -d "$REPO_ROOT/default" ]; then
+    mkdir -p "$HOME/.icons"
+    cp -rf "$REPO_ROOT/default" "$HOME/.icons/"
+fi
+
+log_info "Installing system assets (requires sudo)..."
+
+if [ -d "$REPO_ROOT/Bibata-Modern-Ice" ]; then
+    sudo mkdir -p /usr/share/icons/
+    sudo cp -rf "$REPO_ROOT/Bibata-Modern-Ice" /usr/share/icons/
+fi
+
+if [ -d "$REPO_ROOT/yaretsuo-monochrome-theme" ]; then
+    sudo mkdir -p /usr/share/sddm/themes/
+    sudo cp -rf "$REPO_ROOT/yaretsuo-monochrome-theme" /usr/share/sddm/themes/
+fi
+
+if [ -f "$REPO_ROOT/sddm.conf" ]; then
+    sudo mkdir -p /etc/sddm.conf.d/
+    sudo cp -f "$REPO_ROOT/sddm.conf" /etc/sddm.conf.d/yaretsuo-monochrome.conf
+fi
+
+echo ""
+log_success "Installation finished successfully!"
+echo -e "${BOLD}Recommendation:${RESET} Reboot or log out of your session to apply all settings cleanly.\n"
