@@ -27,6 +27,7 @@ sudo pacman -S --needed qt5ct qt6ct xdg-desktop-portal-hyprland xdg-desktop-port
 | Process viewer | SUPER + Z |
 | Close app | SUPER + C |
 | Screenshot | SUPER + S |
+| Fullscreen | SUPER + F |
 | Clipboard history | SUPER + V |
 | App launcher | SUPER |
 
@@ -44,7 +45,7 @@ There are 5 workspaces in the left module, the clock is in the middle and the tr
 
 # Rofi
 
-<img width="644" height="361" alt="image" src="https://github.com/user-attachments/assets/6690d671-4d44-4f21-8da2-5114281e5fbe" />
+<img width="616" height="403" alt="image" src="https://github.com/user-attachments/assets/a8e0efd9-23e2-4fc6-925c-71bc6506a2a5" />
 
 # Yazi
 
@@ -98,7 +99,7 @@ Q: My background didn't apply, what should I do?
 
 A: Press SUPER + Q and paste:
 ```bash
-pkill awww; awww-daemon & sleep 1 && awww img ~/Pictures/wallpaper.extension
+pkill awww; awww-daemon & sleep 0.5 && awww img ~/Pictures/tux.png
 ```
 Reboot a computer
 
