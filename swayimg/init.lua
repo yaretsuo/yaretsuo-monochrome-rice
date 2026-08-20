@@ -1,1 +1,0 @@
-swayimg.text.visible = false
