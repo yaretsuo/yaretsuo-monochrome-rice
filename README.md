@@ -65,7 +65,9 @@ There are 5 workspaces in the left module, the clock is in the middle and the tr
 
 # AWWW
 
-You can put any background into the ~/Pictures directory
+Any background can be added to the ~/Pictures directory. To change the background you want, press SUPER + W
+
+<img width="631" height="421" alt="image" src="https://github.com/user-attachments/assets/bff07871-904a-402b-913e-4451bf1c85d1" />
 
 # SDDM login theme
 
