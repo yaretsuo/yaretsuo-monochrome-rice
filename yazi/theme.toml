@@ -1,0 +1,42 @@
+[manager]
+cwd = { fg = "white", bold = true }
+
+hovered = { fg = "black", bg = "white", bold = true }
+preview_hovered = { fg = "black", bg = "white" }
+
+find_keyword = { fg = "black", bg = "white", bold = true }
+find_position = { fg = "white" }
+
+marker_selected = { fg = "white", bold = true }
+marker_copied = { fg = "white" }
+marker_cut = { fg = "white" }
+
+tab_active = { fg = "black", bg = "white", bold = true }
+tab_inactive = { fg = "white" }
+
+border_symbol = "|"
+border_style = { fg = "white" }
+
+[status]
+separator_open = ""
+separator_close = ""
+
+mode_normal = { fg = "black", bg = "white", bold = true }
+mode_select = { fg = "black", bg = "white", bold = true }
+mode_unset = { fg = "black", bg = "white", bold = true }
+
+progress_label = { fg = "white" }
+progress_normal = { fg = "white", bg = "black" }
+
+[preview]
+border = { fg = "white" }
+
+[filetype]
+rules = [
+    { mime = "image/*", fg = "white" },
+    { mime = "text/*", fg = "white" },
+
+    { url = "*/", fg = "white", bold = true },
+    { url = "*", is = "link", fg = "white", italic = true },
+    { url = "*", fg = "white" }
+]

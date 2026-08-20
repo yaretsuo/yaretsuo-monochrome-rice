@@ -1,0 +1,78 @@
+* {
+    bg:               #000000;
+    fg:               #ffffff;
+    selected-bg:      #1a1a1a;
+    selected-fg:      #ffffff;
+    muted:            #666666;
+
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+window {
+    width:            480px;
+    border-radius:    10px;
+    border:           2px;
+    border-color:     #ffffff;
+    background-color: @bg;
+    padding:          14px;
+}
+
+mainbox {
+    spacing:          10px;
+    children:         [ "inputbar", "listview" ];
+}
+
+inputbar {
+    spacing:          8px;
+    padding:          6px 8px;
+    children:         [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:          true;
+    font:             "JetBrainsMono Nerd Font 12";
+    text-color:       @muted;
+    padding:          0 4px 0 0;
+}
+
+entry {
+    placeholder:       "Search...";
+    placeholder-color: @muted;
+    text-color:        @fg;
+}
+
+listview {
+    lines:            6;
+    columns:          1;
+    fixed-height:     true;
+    dynamic:          false;
+    scrollbar:        false;
+    spacing:          2px;
+    layout:           vertical;
+}
+
+element {
+    padding:          8px 10px;
+    border-radius:    6px;
+    cursor:           pointer;
+}
+
+/* Элегантный акцент вместо слепящей белой плашки */
+element selected.normal,
+element selected.active {
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
+}
+
+element-icon {
+    size:             20px;
+    padding:          0 10px 0 0;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
