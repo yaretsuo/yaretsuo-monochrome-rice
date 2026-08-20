@@ -66,6 +66,13 @@ if [ -d "$CONFIG_DIR/hypr/scripts" ]; then
     chmod +x "$CONFIG_DIR/hypr/scripts/"*.sh 2>/dev/null || true
 fi
 
+if [ -f "$CONFIG_DIR/qt5ct/qt5ct.conf" ]; then
+    sed -i "s|^color_scheme_path=.*|color_scheme_path=$CONFIG_DIR/qt5ct/colors/Blackout.conf|" "$CONFIG_DIR/qt5ct/qt5ct.conf"
+fi
+if [ -f "$CONFIG_DIR/qt6ct/qt6ct.conf" ]; then
+    sed -i "s|^color_scheme_path=.*|color_scheme_path=$CONFIG_DIR/qt6ct/colors/Blackout.conf|" "$CONFIG_DIR/qt6ct/qt6ct.conf"
+fi
+
 log_info "Deploying wallpapers and icons..."
 mkdir -p "$HOME/Pictures"
 if [ -d "$REPO_ROOT/Pictures" ]; then
