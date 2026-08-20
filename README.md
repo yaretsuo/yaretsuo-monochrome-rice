@@ -2,7 +2,7 @@
 
 Pure minimalist black and white Hyprland rice that uses only cli versions of the apps.
 
-<img width="1914" height="1074" alt="image" src="https://github.com/user-attachments/assets/401cd141-f140-4f31-805f-6e192b2db005" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3c234c2b-5f65-4578-9164-607fa438bd80" />
 
 # Getting started
 
