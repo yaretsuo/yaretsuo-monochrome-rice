@@ -48,10 +48,15 @@ for cfg in "${CONFIGS[@]}"; do
     fi
 done
 
+# Выдаем права на исполнение скриптам Hyprland
+if [ -d "$CONFIG_DIR/hypr/scripts" ]; then
+    chmod +x "$CONFIG_DIR/hypr/scripts/"*.sh 2>/dev/null || true
+fi
+
 log_info "Deploying wallpapers and icons..."
 mkdir -p "$HOME/Pictures"
-if [ -f "$REPO_ROOT/tux.png" ]; then
-    cp -f "$REPO_ROOT/tux.png" "$HOME/Pictures/"
+if [ -d "$REPO_ROOT/Pictures" ]; then
+    cp -rf "$REPO_ROOT/Pictures/." "$HOME/Pictures/"
 fi
 
 if [ -d "$REPO_ROOT/default" ]; then
