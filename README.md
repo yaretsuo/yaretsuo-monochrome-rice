@@ -45,7 +45,7 @@ There are 5 workspaces in the left module, the clock is in the middle and the tr
 
 # Rofi
 
-<img width="616" height="403" alt="image" src="https://github.com/user-attachments/assets/a8e0efd9-23e2-4fc6-925c-71bc6506a2a5" />
+<img width="621" height="413" alt="image" src="https://github.com/user-attachments/assets/229666c5-6a13-4480-9909-4e50ad6afeaf" />
 
 # Yazi
 
