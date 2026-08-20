@@ -20,6 +20,20 @@ BACKUP_DIR="$HOME/.config-backup/backup_$(date +%Y%m%d_%H%M%S)"
 echo -e "${BOLD}=== Yaretsuo Monochrome Rice Installer ===${RESET}\n"
 
 command -v sudo >/dev/null 2>&1 || { log_error "sudo is required but not installed. Aborting."; exit 1; }
+command -v pacman >/dev/null 2>&1 || { log_error "pacman is required but not found. This rice is intended for Arch Linux. Aborting."; exit 1; }
+
+log_info "Installing required packages via pacman..."
+DEPENDENCIES=(
+    base linux linux-firmware grub efibootmgr base-devel vim bash-completion networkmanager git
+    kitty qt5ct qt6ct xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprland
+    ttf-jetbrains-mono-nerd ttf-cascadia-code-nerd mpv woff2-font-awesome orchis-theme gnome-themes-extra
+    waybar rofi hyprcursor mako qt5-declarative qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects
+    papirus-icon-theme noto-fonts noto-fonts-cjk noto-fonts-emoji btop sddm fastfetch
+    pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber grim slurp wl-clipboard cliphist
+    awww imagemagick pulsemixer swayimg unzip 7zip yazi zoxide ripgrep fd fzf libnotify
+)
+
+sudo pacman -S --needed "${DEPENDENCIES[@]}"
 
 log_info "Checking for existing user configurations..."
 CONFIGS=("mako" "hypr" "kitty" "mpv" "swayimg" "qt5ct" "qt6ct" "rofi" "waybar" "yazi")
@@ -48,7 +62,6 @@ for cfg in "${CONFIGS[@]}"; do
     fi
 done
 
-# Выдаем права на исполнение скриптам Hyprland
 if [ -d "$CONFIG_DIR/hypr/scripts" ]; then
     chmod +x "$CONFIG_DIR/hypr/scripts/"*.sh 2>/dev/null || true
 fi
