@@ -88,7 +88,7 @@ Beautiful animated [theme](https://addons.mozilla.org/en-US/firefox/addon/nicoth
 ```bash
 git clone https://github.com/yaretsuo/yaretsuo-monochrome-rice.git
 cd yaretsuo-monochrome-rice
-bash install.sh
+./install.sh
 ```
 
 It's highly recommended to reboot the PC after the installation is complete
