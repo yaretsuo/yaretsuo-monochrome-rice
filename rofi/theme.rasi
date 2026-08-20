@@ -10,12 +10,12 @@
 }
 
 window {
-    width:            480px;
-    border-radius:    10px;
+    width:            600px;
+    border-radius:    12px;
     border:           2px;
     border-color:     #ffffff;
     background-color: @bg;
-    padding:          14px;
+    padding:          20px;
 }
 
 mainbox {
@@ -24,8 +24,8 @@ mainbox {
 }
 
 inputbar {
-    spacing:          8px;
-    padding:          6px 8px;
+    spacing:          0px;
+    padding:          10px;
     children:         [ "prompt", "entry" ];
 }
 
@@ -33,7 +33,7 @@ prompt {
     enabled:          true;
     font:             "JetBrainsMono Nerd Font 12";
     text-color:       @muted;
-    padding:          0 4px 0 0;
+    padding:          0 6px 0 0;
 }
 
 entry {
@@ -48,17 +48,16 @@ listview {
     fixed-height:     true;
     dynamic:          false;
     scrollbar:        false;
-    spacing:          2px;
+    spacing:          4px;
     layout:           vertical;
 }
 
 element {
-    padding:          8px 10px;
-    border-radius:    6px;
+    padding:          10px 12px;
+    border-radius:    10px;
     cursor:           pointer;
 }
 
-/* Элегантный акцент вместо слепящей белой плашки */
 element selected.normal,
 element selected.active {
     background-color: @selected-bg;
@@ -66,8 +65,8 @@ element selected.active {
 }
 
 element-icon {
-    size:             20px;
-    padding:          0 10px 0 0;
+    size:             24px;
+    padding:          0 12px 0 0;
     background-color: transparent;
 }
 
