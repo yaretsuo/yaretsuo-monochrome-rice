@@ -29,6 +29,7 @@ sudo pacman -S --needed qt5ct qt6ct xdg-desktop-portal-hyprland xdg-desktop-port
 | Screenshot | SUPER + S |
 | Fullscreen | SUPER + F |
 | Clipboard history | SUPER + V |
+| Wallpaper selector | SUPER + W |
 | App launcher | SUPER |
 
 Cursor: [Bibata-Modern-Ice](https://github.com/ful1e5/Bibata_Cursor)
@@ -50,7 +51,6 @@ There are 5 workspaces in the left module, the clock is in the middle and the tr
 # Yazi
 
 <img width="1920" height="1044" alt="image" src="https://github.com/user-attachments/assets/6b247af8-0403-45e7-9fcb-dd6008045441" />
-
 
 | Action | Bind |
 |----------|----------|
