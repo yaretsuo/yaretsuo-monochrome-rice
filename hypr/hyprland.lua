@@ -6,6 +6,7 @@ local terminal = "kitty"
 local fileManager = "kitty -e yazi"
 local menu = "rofi -show drun"
 local screenshot = [[sh -c 'grim -g "$(slurp -b 00000000 -s 00000000 -c 00000000 -w 0)" - | wl-copy']]
+local wallpaperSelect = os.getenv("HOME") .. "/.config/hypr/scripts/wallpaper.sh"
 
 hl.env("GDK_BACKEND", "wayland,x11,*")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
@@ -81,6 +82,7 @@ hl.bind("SUPER + S", hl.dsp.exec_cmd(screenshot))
 hl.bind("SUPER + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -p ' ' -display-columns 2 | cliphist decode | wl-copy"))
 hl.bind("SUPER + Z", hl.dsp.exec_cmd("kitty -e btop"))
 hl.bind("SUPER + SUPER_L", hl.dsp.exec_cmd("pkill rofi || " .. menu), { release = true })
+hl.bind("SUPER + W", hl.dsp.exec_cmd(wallpaperSelect))
 
 hl.bind("SUPER + C", hl.dsp.window.close())
 hl.bind("SUPER + F", hl.dsp.window.fullscreen(0))
