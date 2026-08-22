@@ -95,7 +95,7 @@ Q: My background didn't apply, what should I do?
 
 A: Press SUPER + Q and paste:
 ```bash
-pkill awww; awww-daemon & disown; sleep 0.5 && awww img ~/Pictures/archlinux.png
+pkill awww; awww-daemon & disown; awww img ~/Pictures/archlinux.png
 ```
 Reboot a computer
 
