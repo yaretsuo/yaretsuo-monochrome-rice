@@ -7,43 +7,45 @@ layout = [ 1, 3, 4 ]
 
 [opener]
 edit = [
-    { run = 'vim "$@"', block = true, for = "unix" }
+    { run = 'vim "%s"', block = true, desc = "Edit with Vim" }
 ]
 extract = [
-    { run = '7z x "$1"', block = true, desc = "Extract with 7z", for = "unix" }
+    { run = '7z x "%s"', block = true, desc = "Extract with 7z" }
 ]
 display = [
-    { run = 'swayimg "$@"', orphan = true, desc = "Open Image" }
+    { run = 'swayimg "%s"', orphan = true, desc = "Open Image" }
 ]
 video = [
-    { run = 'mpv "$@"', orphan = true, desc = "Play Video with mpv" }
+    { run = 'mpv "%s"', orphan = true, desc = "Play Video with mpv" }
 ]
 audio = [
-    { run = 'mpv --force-window "$@"', orphan = true, desc = "Play Audio with mpv" }
+    { run = 'mpv --force-window "%s"', orphan = true, desc = "Play Audio with mpv" }
 ]
 browser = [
-    { run = 'xdg-open "$@"', desc = "Open in Browser", detach = true }
+    { run = 'xdg-open "%s"', orphan = true, desc = "Open in Browser" }
 ]
 
 [open]
 rules = [
     { mime = "image/*", use = ["display"] },
-    { mime = "image/webp", use = ["display"] },
     { mime = "video/*", use = ["video"] },
     { mime = "audio/*", use = ["audio"] },
-    { mime = "text/*", use = ["edit"] },
+    { mime = "text/*",  use = ["edit"] },
     { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", use = ["extract"] },
 
-    { name = "*.pdf",  mime = "*", use = ["browser"] },
-    { name = "*.mkv",  mime = "*", use = ["video"] },
-    { name = "*.mp4",  mime = "*", use = ["video"] },
-    { name = "*.avi",  mime = "*", use = ["video"] },
-    { name = "*.mov",  mime = "*", use = ["video"] },
-    { name = "*.webm", mime = "*", use = ["video"] },
+    { url = "*.pdf",  use = ["browser"] },
+    { url = "*.mkv",  use = ["video"] },
+    { url = "*.mp4",  use = ["video"] },
+    { url = "*.avi",  use = ["video"] },
+    { url = "*.mov",  use = ["video"] },
+    { url = "*.webm", use = ["video"] },
 
-    { name = "*.conf", mime = "*", use = ["edit"] },
-    { name = "*.yaml", mime = "*", use = ["edit"] },
-    { name = "*.json", mime = "*", use = ["edit"] },
-    { name = "*.yml",  mime = "*", use = ["edit"] },
-    { name = "*",      mime = "*", use = ["edit"] }
+    { url = "*.sh",   use = ["edit"] },
+    { url = "*.conf", use = ["edit"] },
+    { url = "*.yaml", use = ["edit"] },
+    { url = "*.yml",  use = ["edit"] },
+    { url = "*.json", use = ["edit"] },
+    { url = "*.toml", use = ["edit"] },
+
+    { url = "*",      use = ["edit"] }
 ]
