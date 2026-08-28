@@ -89,6 +89,14 @@ cd yaretsuo-monochrome-rice
 
 It's highly recommended to reboot the PC after the installation is complete
 
+# Uninstallation
+
+```bash
+git clone https://github.com/yaretsuo/yaretsuo-monochrome-rice.git
+cd yaretsuo-monochrome-rice
+./uninstall.sh
+```
+
 # Troubleshooting background issues
 
 Q: My background didn't apply, what should I do?
