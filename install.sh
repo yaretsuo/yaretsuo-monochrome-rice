@@ -17,7 +17,7 @@ REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
 BACKUP_DIR="$HOME/.config-backup/backup_$(date +%Y%m%d_%H%M%S)"
 
-echo -e "${BOLD}=== Yaretsuo Monochrome Rice Installer ===${RESET}\n"
+echo -e "${BOLD}=== yaretsuo monochrome rice installer ===${RESET}\n"
 
 command -v sudo >/dev/null 2>&1 || { log_error "sudo is required but not installed. Aborting."; exit 1; }
 command -v pacman >/dev/null 2>&1 || { log_error "pacman is required but not found. This rice is intended for Arch Linux. Aborting."; exit 1; }
@@ -31,6 +31,7 @@ DEPENDENCIES=(
     papirus-icon-theme noto-fonts noto-fonts-cjk noto-fonts-emoji btop sddm fastfetch
     pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber grim slurp wl-clipboard cliphist
     awww imagemagick pulsemixer swayimg unzip 7zip yazi zoxide ripgrep fd fzf libnotify
+    udiskie udisks2
 )
 
 sudo pacman -S --needed "${DEPENDENCIES[@]}"
