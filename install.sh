@@ -17,7 +17,7 @@ REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
 BACKUP_DIR="$HOME/.config-backup/backup_$(date +%Y%m%d_%H%M%S)"
 
-echo -e "${BOLD}=== yaretsuo monochrome rice installer ===${RESET}\n"
+echo -e "${BOLD}=== Yaretsuo Monochrome Rice Installer ===${RESET}\n"
 
 command -v sudo >/dev/null 2>&1 || { log_error "sudo is required but not installed. Aborting."; exit 1; }
 command -v pacman >/dev/null 2>&1 || { log_error "pacman is required but not found. This rice is intended for Arch Linux. Aborting."; exit 1; }
@@ -31,7 +31,7 @@ DEPENDENCIES=(
     papirus-icon-theme noto-fonts noto-fonts-cjk noto-fonts-emoji btop sddm fastfetch
     pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber grim slurp wl-clipboard cliphist
     awww imagemagick pulsemixer swayimg unzip 7zip yazi zoxide ripgrep fd fzf libnotify
-    udiskie udisks2
+    udiskie udisks2 rsync
 )
 
 sudo pacman -S --needed "${DEPENDENCIES[@]}"
@@ -73,6 +73,24 @@ fi
 if [ -f "$CONFIG_DIR/qt6ct/qt6ct.conf" ]; then
     sed -i "s|^color_scheme_path=.*|color_scheme_path=$CONFIG_DIR/qt6ct/colors/Blackout.conf|" "$CONFIG_DIR/qt6ct/qt6ct.conf"
 fi
+
+log_info "Configuring bash environment (~/.bashrc)..."
+BASHRC="$HOME/.bashrc"
+touch "$BASHRC"
+
+ALIASES=(
+    "alias sudo='sudo '"
+    "alias cpr='rsync -ah --info=progress2 --no-inc-recursive --fsync'"
+    "alias mvr='rsync -ah --info=progress2 --no-inc-recursive --fsync --remove-source-files'"
+    "export EDITOR='vim'"
+    "export VISUAL='vim'"
+)
+
+for entry in "${ALIASES[@]}"; do
+    if ! grep -Fxq "$entry" "$BASHRC"; then
+        echo "$entry" >> "$BASHRC"
+    fi
+done
 
 log_info "Deploying wallpapers and icons..."
 mkdir -p "$HOME/Pictures"
