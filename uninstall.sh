@@ -53,8 +53,8 @@ BASHRC="$HOME/.bashrc"
 if [ -f "$BASHRC" ]; then
     log_info "Cleaning up aliases from $BASHRC..."
     sed -i "/alias sudo='sudo '/d" "$BASHRC"
-    sed -i "/alias cpr=/d" "$BASHRC"
-    sed -i "/alias mvr=/d" "$BASHRC"
+    sed -i "/alias cp=/d" "$BASHRC"
+    sed -i "/alias mv=/d" "$BASHRC"
     sed -i "/export EDITOR='vim'/d" "$BASHRC"
     sed -i "/export VISUAL='vim'/d" "$BASHRC"
 fi
