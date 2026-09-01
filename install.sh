@@ -80,8 +80,8 @@ touch "$BASHRC"
 
 ALIASES=(
     "alias sudo='sudo '"
-    "alias cpr='rsync -ah --info=progress2 --no-inc-recursive --fsync'"
-    "alias mvr='rsync -ah --info=progress2 --no-inc-recursive --fsync --remove-source-files'"
+    "alias cp='rsync -ah --info=progress2 --no-inc-recursive --fsync'"
+    "alias mv='rsync -ah --info=progress2 --no-inc-recursive --fsync --remove-source-files'"
     "export EDITOR='vim'"
     "export VISUAL='vim'"
 )
